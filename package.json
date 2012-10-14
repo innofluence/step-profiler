@@ -1,0 +1,15 @@
+{
+  "name": "step-profiler",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/buster-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "innofluence/step-profiler.git"
+  },
+  "author": "",
+  "license": "BSD"
+}

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "innofluence/step-profiler.git"
+    "url": "git://github.com/innofluence/step-profiler.git"
   },
   "author": "",
   "license": "BSD"

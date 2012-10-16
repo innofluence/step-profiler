@@ -22,13 +22,16 @@ This function is called for each response. It is called after data has been conv
 ``javascript
 	app.use(profiler.middleware({disabled: function() {
 		return app.get('environment') == 'production';
-	}, onResponse: function (response, profiling) {
+	}, onResponse: function (response, profiling, callback) {
 		if (this.res.get('Content-Type') && this.res.get('Content-Type').indexOf('json') !== -1) {
 			response = JSON.parse(response);
 			if (!response.result) response = {result: response};
 			response.profiling = profiling;
 			response = JSON.stringify(response);
 		}
+
+
+		callback(response);
 	}}));
 ``
 

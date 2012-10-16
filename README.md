@@ -33,5 +33,6 @@ app.use(profiler.middleware({disabled: function() {
 	callback(response);
 }}));
 ````
+Note that this function takes a callback - if you wish to modify the response, you MUST take a callback, and call it with the modified response.
 
 The function also takes an optional callback. If a third parameter is declared, the server will not respond before this callback is called! This is useful if you need to do async work, i.e. ensuring that logging data has been saved to persistent storage before responding to the client. The callback must be called with a string - that is if you parse the response, you WILL need to ``JSON.stringify`` it before calling the callback.
